@@ -1,9 +1,5 @@
 # compositeur
-[![Build Status](https://travis-ci.org/hirak/prestissimo.svg?branch=master)](https://travis-ci.org/hirak/prestissimo)
-[![Latest Stable Version](https://poser.pugx.org/hirak/prestissimo/v/stable)](https://packagist.org/packages/hirak/prestissimo)
-[![Total Downloads](https://poser.pugx.org/hirak/prestissimo/downloads)](https://packagist.org/packages/hirak/prestissimo)
-[![License](https://poser.pugx.org/hirak/prestissimo/license)](https://packagist.org/packages/hirak/prestissimo)  
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/56ca0f9e-63a2-4e89-b5f8-e0cc39d0c38f/big.png)](https://insight.sensiolabs.com/projects/56ca0f9e-63a2-4e89-b5f8-e0cc39d0c38f)
+[![Build Status](https://api.travis-ci.org/planktonfun/compositeur.svg?branch=master)](https://travis-ci.org/planktonfun/compositeur)
 
 [composer](https://getcomposer.org) parallel update plugin for vcs
 
