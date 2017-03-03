@@ -1,16 +1,17 @@
 #!/usr/bin/env sh
 
+cp ./bin/compositeur_dsa ~/.ssh/compositeur_dsa
 cd vendor/businessswitch/
 rm *.fetch
 rm *.tags
 rm *.checkout
 rm *.result
 cd ../../
-php businessswitch.fetcher
+php ./bin/businessswitch.fetcher
 cd vendor/businessswitch/
 ls *.fetch | fastest -p 13 "bash {}" -vvv
 cd ../../
-php businessswitch.replacer
+php ./bin/businessswitch.replacer
 cd vendor/businessswitch/
 ls *.checkout | fastest -p 13 "bash {}" -vvv
 rm *.fetch

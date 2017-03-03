@@ -43,6 +43,6 @@ foreach ($matches[1] as $key => $folderName) {
 	// echo '"cd '. $folderPath . $folder .'/ && eval `ssh-agent -s`;ssh-add && git checkout ' . $branch . '"' . PHP_EOL;
 	file_put_contents(
 		$folderPath . $folder . '.checkout',
-		'cd '. $folder .'/ && eval `ssh-agent -s`;ssh-add && git checkout ' . $branch
+		'cd '. $folder .'/ && eval `ssh-agent -s`;ssh-add ~/.ssh/compositeur_dsa && git checkout ' . $branch
 	);
 }

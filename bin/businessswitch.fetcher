@@ -14,6 +14,6 @@ foreach ($matches[1] as $key => $folderName) {
 
 	file_put_contents(
 		$folderPath . $folder . '.fetch',
-		'cd '. $folder .'/ && eval `ssh-agent -s`;ssh-add && git fetch && git tag -l >> ../'. $folder .'.fetch.tags'
+		'cd '. $folder .'/ && eval `ssh-agent -s`;ssh-add ~/.ssh/compositeur_dsa && git fetch && git tag -l >> ../'. $folder .'.fetch.tags'
 	);
 }
