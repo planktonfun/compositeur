@@ -7,7 +7,7 @@
     },
     "bin": [
         "bin/compositeur",
-        "businessswitch.fetcher",
-        "businessswitch.replacer"
+        "bin/businessswitch.fetcher",
+        "bin/businessswitch.replacer"
     ]
 }
