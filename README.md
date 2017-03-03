@@ -14,10 +14,16 @@
 Simply add a dependency on liuggio/fastest to your project's composer.json file:
 
 	{
-	    "require-dev": {
+	    "require": {
 		    "planktonfun/compositeur": "~0.1",
 	    }
 	}
+
+then run 
+
+```bash
+$ time composer update --prefer-stable
+```
 
 ## Uninstall
 
