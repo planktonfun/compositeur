@@ -11,9 +11,15 @@
 
 ## Install
 
-```bash
-$ composer require "planktonfun/compositeur:^0.1"
-```
+If you use Composer just run `composer require --dev "planktonfun/compositeur:^0.1"`
+
+or simply add a dependency on liuggio/fastest to your project's composer.json file:
+
+	{
+	    "require-dev": {
+		    "planktonfun/compositeur: ^0.1"
+	    }
+	}
 
 ## Uninstall
 
