@@ -60,9 +60,30 @@ $ time ./bin/compositeur
 ```
 
 # Known Limitations
+
+## It only updates existing repositories not install them
 Compositeur doesn't install new vendors it just updates them.
 if you need to install new vendors you have to install them manually
 
 ```bash
 $ composer install
 ```
+
+## Only available in linux systems
+Unfortunately, automating adding of passwords via ssh-agent on windows is not possible via command
+but there's a workaround
+
+```bash
+ssh-keygen -t dsa
+```
+name it `compositeur_dsa` and no passwords
+
+save it in `~/.ssh/compositeur_dsa`
+
+and save the `~/.ssh/compositeur_dsa.pub` in your vendor site
+
+in my case its https://bitbucket.org
+
+then your done. try again.
+
+
