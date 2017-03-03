@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 cd vendor/businessswitch/
 rm *.fetch
