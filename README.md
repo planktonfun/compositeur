@@ -50,3 +50,11 @@ There are no configs.
 ```bash
 $ time ./bin/compositeur
 ```
+
+# Known Limitations
+Compositeur doesn't install new vendors it just updates them.
+if you need to install new vendors you have to install them manually
+
+```bash
+$ composer install
+```
