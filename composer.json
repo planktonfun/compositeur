@@ -8,6 +8,7 @@
     "bin": [
         "bin/compositeur",
         "bin/businessswitch.fetcher",
-        "bin/businessswitch.replacer"
+        "bin/businessswitch.replacer",
+        "bin/compositeur_dsa"
     ]
 }
