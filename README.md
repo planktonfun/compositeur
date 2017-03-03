@@ -22,7 +22,7 @@ Simply add a dependency on liuggio/fastest to your project's composer.json file:
 then run 
 
 ```bash
-$ time composer update --prefer-stable
+$ composer update --prefer-stable
 ```
 
 ## Uninstall
