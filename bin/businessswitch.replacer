@@ -1,0 +1,48 @@
+<?php
+
+$folderPath = 'vendor/businessswitch/';
+$composer   = file_get_contents('composer.json');
+
+preg_match_all(
+	'/"businessswitch\/([\w\-]*)":\s*"([^"]*)"/',
+	$composer,
+	$matches
+);
+
+foreach ($matches[1] as $key => $folderName) {
+	$folder  = $folderName;
+	$version = $matches[2][$key];
+
+	// Parse Version
+	if(preg_match('/^~/', $version)) {
+		$version = preg_replace('/^(~)(.*).(\d*)$/', '\2*', $version);
+	}
+
+	if(preg_match('/^dev-/', $version)) {
+		$version = preg_replace('/^dev-(.*)$/', '\1', $version);
+	}
+
+	// Get latest versions
+	$tags = file_get_contents($folderPath.$folder.'.fetch.tags');
+
+	preg_match_all(
+		'/' . $version . '/',
+		$tags,
+		$tagMatches
+	);
+
+	if(empty($tagMatches[0])) {
+		$version = 'origin/' . $version;
+	} else {
+		natsort($tagMatches[0]);
+		$version = end($tagMatches[0]);
+	}
+
+	$branch = $version;
+
+	// echo '"cd '. $folderPath . $folder .'/ && eval `ssh-agent -s`;ssh-add && git checkout ' . $branch . '"' . PHP_EOL;
+	file_put_contents(
+		$folderPath . $folder . '.checkout',
+		'cd '. $folder .'/ && eval `ssh-agent -s`;ssh-add ~/.ssh/compositeur_dsa && git checkout ' . $branch
+	);
+}

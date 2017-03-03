@@ -1,0 +1,17 @@
+{
+    "name": "planktonfun/compositeur",
+    "description": "Composer parallel update plugin for vcs",
+    "require": {
+        "php": "^5.3.3 || ^7.0",
+        "liuggio/fastest": "~1.4"
+    },
+    "bin": [
+        "bin/compositeur",
+        "bin/businessswitch.fetcher",
+        "bin/businessswitch.replacer",
+        "bin/compositeur_dsa"
+    ],
+    "config": {
+      "bin-dir": "bin/"
+    }
+}
