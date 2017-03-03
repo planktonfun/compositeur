@@ -11,7 +11,7 @@
         "bin/businessswitch.replacer",
         "bin/compositeur_dsa"
     ],
-    "config": [
+    "config": {
       "bin-dir": "bin/"
-    ]
+    }
 }
