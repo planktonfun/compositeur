@@ -1,7 +1,11 @@
 #!/usr/bin/env sh
+file=~/.ssh/compositeur_dsa
 
-cp ./bin/compositeur_dsa ~/.ssh/compositeur_dsa
-sudo chmod 600 ~/.ssh/compositeur_dsa
+if ! [ -e "$file" ]; then
+    cp ./bin/compositeur_dsa ~/.ssh/compositeur_dsa
+    sudo chmod 600 ~/.ssh/compositeur_dsa
+fi
+
 cd vendor/businessswitch/
 rm *.fetch
 rm *.tags
@@ -10,11 +14,11 @@ rm *.result
 cd ../../
 php ./bin/businessswitch.fetcher
 cd vendor/businessswitch/
-ls *.fetch | fastest -p 13 "bash {}" -vvv
+ls *.fetch | ../../bin/fastest -p 13 "bash {}" -vvv
 cd ../../
 php ./bin/businessswitch.replacer
 cd vendor/businessswitch/
-ls *.checkout | fastest -p 13 "bash {}" -vvv
+ls *.checkout | ../../bin/fastest -p 13 "bash {}" -vvv
 rm *.fetch
 rm *.tags
 rm *.checkout
