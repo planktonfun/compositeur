@@ -26,4 +26,31 @@ $ composer remove planktonfun/compositeur
 ```
 
 ## Benchmark Example
-2mins 33s -> 7.093s
+
+Before (2mins 33s)
+
+```bash
+$ time composer update --prefer-stable -o
+```
+
+![vcsbefore](https://cloud.githubusercontent.com/assets/1837825/23534316/07bb9626-fff2-11e6-9447-3fe056b0e0fc.gif)
+
+After (7.093s)
+
+```bash
+$ time ./bin/compositeur
+```
+
+![vcsafter](https://cloud.githubusercontent.com/assets/1837825/23534317/09e9ebd2-fff2-11e6-86fd-3fd6cc44febe.gif)
+
+## Config
+
+### `compositeur ^0.1`
+
+There are no configs.
+
+## Usage
+
+```bash
+$ time ./bin/compositeur
+```
