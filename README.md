@@ -31,7 +31,7 @@ $ composer remove planktonfun/compositeur
 
 ## Benchmark Example
 
-Before (2mins 33s)
+Before (4m 13.948s)
 
 ```bash
 $ time composer update --prefer-stable -o
