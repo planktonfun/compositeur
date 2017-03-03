@@ -1,0 +1,19 @@
+<?php
+
+$folderPath = 'vendor/businessswitch/';
+$composer   = file_get_contents('composer.json');
+
+preg_match_all(
+	'/"businessswitch\/([\w\-]*)":\s*"([^"]*)"/',
+	$composer,
+	$matches
+);
+
+foreach ($matches[1] as $key => $folderName) {
+	$folder  = $folderName;
+
+	file_put_contents(
+		$folderPath . $folder . '.fetch',
+		'cd '. $folder .'/ && eval `ssh-agent -s`;ssh-add && git fetch && git tag -l >> ../'. $folder .'.fetch.tags'
+	);
+}
