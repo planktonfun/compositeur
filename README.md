@@ -1,4 +1,4 @@
-# compositeur
+# Compositeur
 [![Build Status](https://api.travis-ci.org/planktonfun/compositeur.svg?branch=master)](https://travis-ci.org/planktonfun/compositeur)
 
 [composer](https://getcomposer.org) parallel update plugin for vcs
