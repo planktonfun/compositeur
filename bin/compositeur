@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 cp ./bin/compositeur_dsa ~/.ssh/compositeur_dsa
+sudo chmod 600 ~/.ssh/compositeur_dsa
 cd vendor/businessswitch/
 rm *.fetch
 rm *.tags
