@@ -2,8 +2,14 @@
 file=~/.ssh/compositeur_dsa
 
 if ! [ -e "$file" ]; then
-    cp ./bin/compositeur_dsa ~/.ssh/compositeur_dsa
-    sudo chmod 600 ~/.ssh/compositeur_dsa
+	cp ./bin/compositeur_dsa ~/.ssh/compositeur_dsa
+	if [ "$(uname)" == "Darwin" ]; then
+    	sudo chmod 600 ~/.ssh/compositeur_dsa
+    elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+        	sudo chmod 600 ~/.ssh/compositeur_dsa
+        elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+            	chmod 600 ~/.ssh/compositeur_dsa
+            fi
 fi
 
 cd vendor/businessswitch/
